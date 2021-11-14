@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import time
 
 X='x'
 
@@ -9,9 +10,9 @@ def mult(l):
     for x in l: res = res*x
     return res
 
-def leastCommonMultiple(ms):
-    ds = set(ms)
-    ms = set(ms)
+def leastCommonMultiple(measures):
+    ds = set(measures)
+    ms = set(measures)
     for x in ds:
         for y in ds:
             if x > y and x % y == 0 and x in ms:
@@ -29,11 +30,11 @@ def divides(ms, x):
         if x%m == 0: return True
     return False
 
-def poly(ms):
-    lcm = leastCommonMultiple(ms)
-    for m in ms:
-        mono(m, lcm)
-    lz = lambda x: X if divides(ms, x) else '.'
+def poly(measures):
+    lcm = leastCommonMultiple(measures)
+    for measure in measures:
+        mono(measure, lcm)
+    lz = lambda x: X if divides(measures, x) else '.'
     z = "".join(list(map(lz, range(lcm))))
     print(z)
 

@@ -1,4 +1,4 @@
-A small script to print out polyrhythms for a given combination of beats.
+A small script to print out polyrhythms for a given combination of beats. Reimplemented also in Rust for fun's sake.
 
 Prints out the individual beats, and then their combination.
 
